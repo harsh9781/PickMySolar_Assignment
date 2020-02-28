@@ -1,0 +1,25 @@
+
+    
+
+      Enter First Name:<input type="text" [(ngModel)] = "fn" class="form-control">
+      Enter Last Name:<input type="text" [(ngModel)] = "ln" class="form-control">
+      Enter Age:<input type="text" [(ngModel)] = "age" class="form-control">
+     
+      
+
+
+<button (click)="addStudent()">Add Student</button> &nbsp;
+<button (click)="updateStudent()">Save</button> &nbsp;
+
+<button (click)="getstudent()">Get Students</button>  &nbsp;
+
+ <table border="2">
+        <tr *ngFor="let c of students">
+            <td>{{c.firstname}}</td>
+            <td>{{c.lastname}}</td>
+            <td>{{c.age}}</td>
+            <td><button (click)="edit(c)">Edit</button></td>
+            <td><button (click)= "deletestudent(c._id.$oid)">Delete</button></td>
+          </tr>
+
+ </table>

@@ -1,0 +1,17 @@
+
+
+<input type="text" [(ngModel)]='y'>
+<table id="d1">
+      <tr>
+        <th (click)="x='name'">Sort by Name</th>
+        <th (click)="x='username'">Sort by Username</th>
+        <th (click)="x='phone'">Sort by Phone</th>
+        <th (click)="x='email'"> Sort by Email</th> 
+      </tr>
+			<tr *ngFor="let user of users|sort:x|search:y">
+				<td>{{user.name}}</td>
+				<td>{{user.username}}</td>
+				<td>{{user.phone}}</td>
+				<td>{{user.email}}</td>
+			</tr>
+</table>
